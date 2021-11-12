@@ -1,2 +1,4 @@
-# CSGSO_BCBGSO_Fall_2021_Hackathon_Crappy_Coders
-CSGSO_BCBGSO_Fall_2021_Hackathon_Crappy_Coders
+# Crappy Coders
+## Blackjack Hack
+
+Card counting program to make winning in blackjack easier.
