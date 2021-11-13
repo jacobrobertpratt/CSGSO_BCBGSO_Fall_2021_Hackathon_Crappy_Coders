@@ -1,0 +1,89 @@
+:root {
+    --green: #35654d;
+    --white: #ffffff;
+    --black: #000000;
+}
+
+.light-theme {
+    --bg: var(--green);
+    --fontColor: var(--black);
+    --btnBg: var(--black);
+    --btnFontColor: var(--white);
+}
+
+.dark-theme {
+    --bg: var(--black);
+    --fontColor: var(--green);
+    --btnBg: var(--white);
+    --btnFontColor: var(--black);
+}
+
+* {
+    color: var(--fontColor);
+    font-family: helvetica;
+}
+body {
+    background: var(--bg);
+}
+
+ul {
+    font-family: helvetica;
+}
+
+li {
+    list-style: circle;
+}
+
+.list {
+    list-style: square;
+}
+
+#header {
+    text-align: center;
+}
+
+.btn {
+    position: absolute;
+    top: 20px;
+    left: 250px;
+    height: 350px;
+    width: 250px;
+    border-radius: 25;
+    position: relative;
+    border: none;
+    color: var(--btnFontColor);
+    background-color: var(--btnBg);
+}
+
+.cards {
+    text-align: center;
+}
+
+#card1, #card2, #card3, #card4, #card5, #card6, #card7, #card8,
+#card9, #card10, #card11, #card12, #card13, #card14, #card15, #card16, 
+#card17, #card18, #card19, #card20, #card21, #card22, #card23, #card24, 
+#card25, #card26, #card27, #card28, #card29, #card30, #card31, #card32, 
+#card33, #card34, #card35, #card36, #card37, #card38, #card39, #card40, 
+#card41, #card42, #card43, #card44, #card45, #card46, #card47, #card48,
+#card49, #card50, #card51, #card52 {
+    width: 85px;
+    height: 120px;
+    margin: auto;
+    border: 1px solid black;
+    border-radius: 6px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#addDeck {
+    width: 150px;
+    height: 50px;
+    margin: auto;
+    border: 1px solid gray;
+    border-radius: 6px;
+    font-size: 10px;
+    text-align: center;
+}
+
+.btn:focus { outline-style: none; }
