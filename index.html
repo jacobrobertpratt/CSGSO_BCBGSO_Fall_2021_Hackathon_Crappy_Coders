@@ -13,65 +13,68 @@
 
 <body class="light-theme">
     <div>
-        <h1 id="header">Blackjack Hack</h1>
-        <button id="addDeck" onclick="addDeck()">Add Deck</button>
+        <h1 id="header" style="background: url(images/header.png)"></h1>
+        <div style="text-align: center;">
+            <button class="decks" id="addDeck" onclick="addDeck()">Add Decks: 1</button>
+            <button class="decks" onclick="dealerShuffled()">Shuffle Decks</button>
+        </div>
         <br><br>
         <div class="cards">
-            <button id="card1" onclick="card1()"style="background: url(images/AH.jpg)">0</button>
-            <button id="card2" onclick="card2()"style="background: url(images/2H.jpg)">0</button>
-            <button id="card3" onclick="card3()"style="background: url(images/3H.jpg)">0</button>
-            <button id="card4" onclick="card4()"style="background: url(images/4H.jpg)">0</button>
-            <button id="card5" onclick="card5()"style="background: url(images/5H.jpg)">0</button>
-            <button id="card6" onclick="card6()"style="background: url(images/6H.jpg)">0</button>
-            <button id="card7" onclick="card7()"style="background: url(images/7H.jpg)">0</button>
-            <button id="card8" onclick="card8()"style="background: url(images/8H.jpg)">0</button>
-            <button id="card9" onclick="card9()"style="background: url(images/9H.jpg)">0</button>
-            <button id="card10" onclick="card10()"style="background: url(images/10H.jpg)">0</button>
-            <button id="card11" onclick="card11()"style="background: url(images/JH.jpg)">0</button>
-            <button id="card12" onclick="card12()"style="background: url(images/QH.jpg)">0</button>
-            <button id="card13" onclick="card13()"style="background: url(images/KH.jpg)">0</button>
+            <button id="card1" onclick="card1()" style="background: url(images/AH.jpg)">1</button>
+            <button id="card2" onclick="card2()" style="background: url(images/2H.jpg)">1</button>
+            <button id="card3" onclick="card3()" style="background: url(images/3H.jpg)">1</button>
+            <button id="card4" onclick="card4()" style="background: url(images/4H.jpg)">1</button>
+            <button id="card5" onclick="card5()" style="background: url(images/5H.jpg)">1</button>
+            <button id="card6" onclick="card6()" style="background: url(images/6H.jpg)">1</button>
+            <button id="card7" onclick="card7()" style="background: url(images/7H.jpg)">1</button>
+            <button id="card8" onclick="card8()" style="background: url(images/8H.jpg)">1</button>
+            <button id="card9" onclick="card9()" style="background: url(images/9H.jpg)">1</button>
+            <button id="card10" onclick="card10()" style="background: url(images/10H.jpg)">1</button>
+            <button id="card11" onclick="card11()" style="background: url(images/JH.jpg)">1</button>
+            <button id="card12" onclick="card12()" style="background: url(images/QH.jpg)">1</button>
+            <button id="card13" onclick="card13()" style="background: url(images/KH.jpg)">1</button>
             <br>
-            <button id="card14" onclick="card14()">Ace of Diamonds 1</button>
-            <button id="card15" onclick="card15()">2 of Diamonds 1</button>
-            <button id="card16" onclick="card16()">3 of Diamonds 1</button>
-            <button id="card17" onclick="card17()">4 of Diamonds 1</button>
-            <button id="card18" onclick="card18()">5 of Diamonds 1</button>
-            <button id="card19" onclick="card19()">6 of Diamonds 1</button>
-            <button id="card20" onclick="card20()">7 of Diamonds 1</button>
-            <button id="card21" onclick="card21()">8 of Diamonds 1</button>
-            <button id="card22" onclick="card22()">9 of Diamonds 1</button>
-            <button id="card23" onclick="card23()">10 of Diamonds 1</button>
-            <button id="card24" onclick="card24()">Jack of Diamonds 1</button>
-            <button id="card25" onclick="card25()">Queen of Diamonds 1</button>
-            <button id="card26" onclick="card26()">King of Diamonds 1</button>
+            <button id="card14" onclick="card14()" style="background: url(images/AD.jpg)">1</button>
+            <button id="card15" onclick="card15()" style="background: url(images/2D.jpg)">1</button>
+            <button id="card16" onclick="card16()" style="background: url(images/3D.jpg)">1</button>
+            <button id="card17" onclick="card17()" style="background: url(images/4D.jpg)">1</button>
+            <button id="card18" onclick="card18()" style="background: url(images/5D.jpg)">1</button>
+            <button id="card19" onclick="card19()" style="background: url(images/6D.jpg)">1</button>
+            <button id="card20" onclick="card20()" style="background: url(images/7D.jpg)">1</button>
+            <button id="card21" onclick="card21()" style="background: url(images/8D.jpg)">1</button>
+            <button id="card22" onclick="card22()" style="background: url(images/9D.jpg)">1</button>
+            <button id="card23" onclick="card23()" style="background: url(images/10D.jpg)">1</button>
+            <button id="card24" onclick="card24()" style="background: url(images/JD.jpg)">1</button>
+            <button id="card25" onclick="card25()" style="background: url(images/QD.jpg)">1</button>
+            <button id="card26" onclick="card26()" style="background: url(images/KD.jpg)">1</button>
             <br>
-            <button id="card27" onclick="card27()">Ace of Spades 1</button>
-            <button id="card28" onclick="card28()">2 of Spades 1</button>
-            <button id="card29" onclick="card29()">3 of Spades 1</button>
-            <button id="card30" onclick="card30()">4 of Spades 1</button>
-            <button id="card31" onclick="card31()">5 of Spades 1</button>
-            <button id="card32" onclick="card32()">6 of Spades 1</button>
-            <button id="card33" onclick="card33()">7 of Spades 1</button>
-            <button id="card34" onclick="card34()">8 of Spades 1</button>
-            <button id="card35" onclick="card35()">9 of Spades 1</button>
-            <button id="card36" onclick="card36()">10 of Spades 1</button>
-            <button id="card37" onclick="card37()">Jack of Spades 1</button>
-            <button id="card38" onclick="card38()">Queen of Spades 1</button>
-            <button id="card39" onclick="card39()">King of Spades 1</button>
+            <button id="card27" onclick="card27()" style="background: url(images/AS.jpg)">1</button>
+            <button id="card28" onclick="card28()" style="background: url(images/2S.jpg)">1</button>
+            <button id="card29" onclick="card29()" style="background: url(images/3S.jpg)">1</button>
+            <button id="card30" onclick="card30()" style="background: url(images/4S.jpg)">1</button>
+            <button id="card31" onclick="card31()" style="background: url(images/5S.jpg)">1</button>
+            <button id="card32" onclick="card32()" style="background: url(images/6S.jpg)">1</button>
+            <button id="card33" onclick="card33()" style="background: url(images/7S.jpg)">1</button>
+            <button id="card34" onclick="card34()" style="background: url(images/8S.jpg)">1</button>
+            <button id="card35" onclick="card35()" style="background: url(images/9S.jpg)">1</button>
+            <button id="card36" onclick="card36()" style="background: url(images/10S.jpg)">1</button>
+            <button id="card37" onclick="card37()" style="background: url(images/JS.jpg)">1</button>
+            <button id="card38" onclick="card38()" style="background: url(images/QS.jpg)">1</button>
+            <button id="card39" onclick="card39()" style="background: url(images/KS.jpg)">1</button>
             <br>
-            <button id="card40" onclick="card40()">Ace of Clubs 1</button>
-            <button id="card41" onclick="card41()">2 of Clubs 1</button>
-            <button id="card42" onclick="card42()">3 of Clubs 1</button>
-            <button id="card43" onclick="card43()">4 of Clubs 1</button>
-            <button id="card44" onclick="card44()">5 of Clubs 1</button>
-            <button id="card45" onclick="card45()">6 of Clubs 1</button>
-            <button id="card46" onclick="card46()">7 of Clubs 1</button>
-            <button id="card47" onclick="card47()">8 of Clubs 1</button>
-            <button id="card48" onclick="card48()">9 of Clubs 1</button>
-            <button id="card49" onclick="card49()">10 of Clubs 1</button>
-            <button id="card50" onclick="card50()">Jack of Clubs 1</button>
-            <button id="card51" onclick="card51()">Queen of Clubs 1</button>
-            <button id="card52" onclick="card52()">King of Clubs 1</button>
+            <button id="card40" onclick="card40()" style="background: url(images/AC.jpg)">1</button>
+            <button id="card41" onclick="card41()" style="background: url(images/2C.jpg)">1</button>
+            <button id="card42" onclick="card42()" style="background: url(images/3C.jpg)">1</button>
+            <button id="card43" onclick="card43()" style="background: url(images/4C.jpg)">1</button>
+            <button id="card44" onclick="card44()" style="background: url(images/5C.jpg)">1</button>
+            <button id="card45" onclick="card45()" style="background: url(images/6C.jpg)">1</button>
+            <button id="card46" onclick="card46()" style="background: url(images/7C.jpg)">1</button>
+            <button id="card47" onclick="card47()" style="background: url(images/8C.jpg)">1</button>
+            <button id="card48" onclick="card48()" style="background: url(images/9C.jpg)">1</button>
+            <button id="card49" onclick="card49()" style="background: url(images/10C.jpg)">1</button>
+            <button id="card50" onclick="card50()" style="background: url(images/JC.jpg)">1</button>
+            <button id="card51" onclick="card51()" style="background: url(images/QC.jpg)">1</button>
+            <button id="card52" onclick="card52()" style="background: url(images/KC.jpg)">1</button>
         </div>
     </div>
 </body>

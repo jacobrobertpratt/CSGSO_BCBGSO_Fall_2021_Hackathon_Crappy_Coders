@@ -1,27 +1,9 @@
 'use strict';
 
-//var dealerCard = 0
-/*function getDealerWinChance() {
-=
-}*/
-
-/*function findAverageHit() {
-    var averageHit = totalOfCards / cardsLeft() 
-    return averageHit
-}*/
-
-/*function shouldHit() {
-    if (yourCard + averageHit) <= 21{
-  console.log("Hit")
-  }
-  else{
-  console.log("Don't Hit")
-}
-}*/
-
 var numDecks = 1;
-var numCards = 52
 var deckArray = [numDecks];
+var inputFromDealer = 0;
+var inputFromHuman = 0;
 for (var i = 0; i < 51; i++) {
     deckArray.push(numDecks);
 }
@@ -30,8 +12,11 @@ for (var i = 0; i < 51; i++) {
 
 function dealerShuffled() {
     deckArray = []
-    for (var i = 0; i < 51; i++) {
-        deckArray.push(numDecks);
+    for (var i = 0; i < 52; i++) {
+        deckArray[i] = numDecks;
+    }
+    for (var i = 0; i < 52; i++) {
+        updateCard(i + 1)
     }
 }
 
@@ -47,24 +32,28 @@ function addDeck() {
         deckArray[i] = numDecks;
     }
 
-    cardsLeft();
     for (var i = 0; i < 52; i++) {
         updateCard(i + 1)
     }
 }
 
-function totalOfCards() {
-    var temp = 0;
-    for (var i = 0; i < 52; i++) {
-
+function arrayOfNums(arr) {
+    var arrNums = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+    for (var g = 0; g < 9; g++) {
+        arrNums[g] += (arr[g] + arr[g + 13] + arr[g + 26] + arr[g + 39]);
+    }
+    for (var g = 9; g < 52; g + 10) {
+        arrNums[9] += (arr[g + 9] + arr[g + 10] + arr[g + 11] + arr[g + 12]);
     }
 }
 
-function cardsLeft() {
-    numCards = 0;
-    for (var i = 0; i < 52; i++) {
-        numCards += deckArray[i];
+
+function cardsLeft(arr) {
+    var numCards = 0;
+    for (var i = 0; i < arr.length; i++) {
+        numCards += arr[i];
     }
+    return numCards
 }
 
 
@@ -122,164 +111,75 @@ function card51() { if (deckArray[50] > 0) { deckArray[50]--; } updateCard(51); 
 function card52() { if (deckArray[51] > 0) { deckArray[51]--; } updateCard(52); }
 
 
-
 function updateCard(a) {
-    switch (a) {
-        case 1:
-            document.getElementById("card" + a).innerHTML = "" + deckArray[a - 1];
-            break;
-        case 2:
-            document.getElementById("card" + a).innerHTML = "" + deckArray[a - 1];
-            break;
-        case 3:
-            document.getElementById("card" + a).innerHTML = "" + deckArray[a - 1];
-            break;
-        case 4:
-            document.getElementById("card" + a).innerHTML = "" + deckArray[a - 1];
-            break;
-        case 5:
-            document.getElementById("card" + a).innerHTML = "" + deckArray[a - 1];
-            break;
-        case 6:
-            document.getElementById("card" + a).innerHTML = "" + deckArray[a - 1];
-            break;
-        case 7:
-            document.getElementById("card" + a).innerHTML = "" + deckArray[a - 1];
-            break;
-        case 8:
-            document.getElementById("card" + a).innerHTML = "" + deckArray[a - 1];
-            break;
-        case 9:
-            document.getElementById("card" + a).innerHTML = "" + deckArray[a - 1];
-            break;
-        case 10:
-            document.getElementById("card" + a).innerHTML = "" + deckArray[a - 1];
-            break;
-        case 11:
-            document.getElementById("card" + a).innerHTML = "" + deckArray[a - 1];
-            break;
-        case 12:
-            document.getElementById("card" + a).innerHTML = "" + deckArray[a - 1];
-            break;
-        case 13:
-            document.getElementById("card" + a).innerHTML = "" + deckArray[a - 1];
-            break;
-        case 14:
-            document.getElementById("card" + a).innerHTML = "Ace of Diamonds " + deckArray[a - 1];
-            break;
-        case 15:
-            document.getElementById("card" + a).innerHTML = "2 of Diamonds " + deckArray[a - 1];
-            break;
-        case 16:
-            document.getElementById("card" + a).innerHTML = "3 of Diamonds " + deckArray[a - 1];
-            break;
-        case 17:
-            document.getElementById("card" + a).innerHTML = "4 of Diamonds " + deckArray[a - 1];
-            break;
-        case 18:
-            document.getElementById("card" + a).innerHTML = "5 of Diamonds " + deckArray[a - 1];
-            break;
-        case 19:
-            document.getElementById("card" + a).innerHTML = "6 of Diamonds " + deckArray[a - 1];
-            break;
-        case 20:
-            document.getElementById("card" + a).innerHTML = "7 of Diamonds " + deckArray[a - 1];
-            break;
-        case 21:
-            document.getElementById("card" + a).innerHTML = "8 of Diamonds " + deckArray[a - 1];
-            break;
-        case 22:
-            document.getElementById("card" + a).innerHTML = "9 of Diamonds " + deckArray[a - 1];
-            break;
-        case 23:
-            document.getElementById("card" + a).innerHTML = "10 of Diamonds " + deckArray[a - 1];
-            break;
-        case 24:
-            document.getElementById("card" + a).innerHTML = "Jack of Diamonds " + deckArray[a - 1];
-            break;
-        case 25:
-            document.getElementById("card" + a).innerHTML = "Queen of Diamonds " + deckArray[a - 1];
-            break;
-        case 26:
-            document.getElementById("card" + a).innerHTML = "King of Diamonds " + deckArray[a - 1];
-            break;
-        case 27:
-            document.getElementById("card" + a).innerHTML = "Ace of Spades " + deckArray[a - 1];
-            break;
-        case 28:
-            document.getElementById("card" + a).innerHTML = "2 of Spades " + deckArray[a - 1];
-            break;
-        case 29:
-            document.getElementById("card" + a).innerHTML = "3 of Spades " + deckArray[a - 1];
-            break;
-        case 30:
-            document.getElementById("card" + a).innerHTML = "4 of Spades " + deckArray[a - 1];
-            break;
-        case 31:
-            document.getElementById("card" + a).innerHTML = "5 of Spades " + deckArray[a - 1];
-            break;
-        case 32:
-            document.getElementById("card" + a).innerHTML = "6 of Spades " + deckArray[a - 1];
-            break;
-        case 33:
-            document.getElementById("card" + a).innerHTML = "7 of Spades " + deckArray[a - 1];
-            break;
-        case 34:
-            document.getElementById("card" + a).innerHTML = "8 of Spades " + deckArray[a - 1];
-            break;
-        case 35:
-            document.getElementById("card" + a).innerHTML = "9 of Spades " + deckArray[a - 1];
-            break;
-        case 36:
-            document.getElementById("card" + a).innerHTML = "10 of Spades " + deckArray[a - 1];
-            break;
-        case 37:
-            document.getElementById("card" + a).innerHTML = "Jack of Spades " + deckArray[a - 1];
-            break;
-        case 38:
-            document.getElementById("card" + a).innerHTML = "Queen of Spades " + deckArray[a - 1];
-            break;
-        case 39:
-            document.getElementById("card" + a).innerHTML = "King of Spades " + deckArray[a - 1];
-            break;
-        case 40:
-            document.getElementById("card" + a).innerHTML = "Ace of Clubs " + deckArray[a - 1];
-            break;
-        case 41:
-            document.getElementById("card" + a).innerHTML = "2 of Clubs " + deckArray[a - 1];
-            break;
-        case 42:
-            document.getElementById("card" + a).innerHTML = "3 of Clubs " + deckArray[a - 1];
-            break;
-        case 43:
-            document.getElementById("card" + a).innerHTML = "4 of Clubs " + deckArray[a - 1];
-            break;
-        case 44:
-            document.getElementById("card" + a).innerHTML = "5 of Clubs " + deckArray[a - 1];
-            break;
-        case 45:
-            document.getElementById("card" + a).innerHTML = "6 of Clubs " + deckArray[a - 1];
-            break;
-        case 46:
-            document.getElementById("card" + a).innerHTML = "7 of Clubs " + deckArray[a - 1];
-            break;
-        case 47:
-            document.getElementById("card" + a).innerHTML = "8 of Clubs " + deckArray[a - 1];
-            break;
-        case 48:
-            document.getElementById("card" + a).innerHTML = "9 of Clubs " + deckArray[a - 1];
-            break;
-        case 49:
-            document.getElementById("card" + a).innerHTML = "10 of Clubs " + deckArray[a - 1];
-            break;
-        case 50:
-            document.getElementById("card" + a).innerHTML = "Jack of Clubs " + deckArray[a - 1];
-            break;
-        case 51:
-            document.getElementById("card" + a).innerHTML = "Queen of Clubs " + deckArray[a - 1];
-            break;
-        case 52:
-            document.getElementById("card" + a).innerHTML = "King of Clubs " + deckArray[a - 1];
-            break;
+    document.getElementById("card" + a).innerHTML = "" + deckArray[a - 1];
+}
+
+function updateDealer() {
+    inputFromDealer = document.getElementById("dealerHandValue").value;
+}
+
+function updateHuman() {
+    inputFromHuman = document.getElementById("handValue").value;
+}
+
+function hitButton() {
+    if (shouldHit()) {
+        document.getElementById("shouldHit").innerHTML = "Should Hit? YES"
+    } else {
+        document.getElementById("shouldHit").innerHTML = "Should Hit? NO"
     }
+}
+
+function shouldHit() {
+    updateHuman();
+    updateDealer();
+    var current = inputFromDealer;
+    var human = inputFromHuman;
+    var arr = arrayOfNums(deckArray);
+    console.log(current + "   " + human);
+    console.log(chanceWinHit(current, human, arr) + "   " + chanceWin(current, human, arr));
+    return chanceWinHit(current, human, arr) <= chanceWin(current, human, arr);
+}
+
+function chanceWinHit(current,human,arr) {
+    chanceWin = 0;
+
+    for(var q = 0; q < 10 ; q++) {
+        if(human + q + 1 > 21) {
+            chanceWin += (arr[q]/numCards(arr));
+        }
+    } 
+
+    for(var q = 0; q < 10; q++) {
+        if(human + q + 1 <= 21) {
+            chanceWin += chanceWin(current, human + q + 1, arr);
+        }
+    } 
+    return chanceWin;
+}
+
+function chanceWin(current, human, arr) {
+    var temp;
+    var totalChance = 0;
+    if (current > 21) {
+        return 0;
+    }
+    if (current >= 16 && current < human) {
+        return 0;
+    }
+    if (current >= 16 && current == human) {
+        return .5;
+    }
+    if (current > human) {
+        return 1;
+    }
+    for (var y = 0; y < 10; y++) {
+        if (arr[y] > 0) {
+            temp = arr;
+            temp[y]--;
+            totalChance += (arr[y] / numCards(arr)) * chanceWin(current + y + 1, human, temp)
+        }
+    }
+    return totalChance;
 }
